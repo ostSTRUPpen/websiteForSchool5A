@@ -1,0 +1,79 @@
+/* CSS pro captchu PROSÍM NEŠAHAT BEZ MÉHO SVOLENÍ > */
+#captcha {
+	display: none;
+	background-color: #ffffff;
+	border: 1px solid #aaa;
+	position: fixed;
+	width: 250px;
+	left: 50%;
+    bottom: 50%;
+	margin-left: -100px;
+    margin-bottom: -5%;
+	padding: 6px 8px 8px;
+	box-sizing: border-box;
+	text-align: center;
+}
+#captcha button {
+	background-color: #48e5da;
+	display: inline-block;
+	border-radius: 5px;
+	border: 1px solid #aaa;
+	margin-top: 2%;
+	padding: 5px;
+	text-align: center;
+	width: 80px;
+	cursor: pointer;
+}
+#captcha .message {
+	text-align: left;
+}
+/* < CSS pro captchu PROSÍM NEŠAHAT BEZ MÉHO SVOLENÍ */
+.important{
+    color:red;
+}
+h3 {
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	text-align: center;
+	font-size: 50px;
+	font-weight: 200;
+	font-family: 'Brush Script MT';
+	text-shadow: 1px 1px 4px #00000070;
+}
+form {
+	padding-top: 0px;
+	font-family: Candara;
+}
+fieldset{
+	border: none;
+}
+.logo {
+	float: right;
+	margin-right: 3%;
+	margin-top: 3%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* HTML */
+#hypertextmarkuplanguage {
+	background-color:rgb(241,101,40,0.8);
+	padding-bottom: 3px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+/* CSS */
+#cascadingstylesheets {
+	background-color: rgb(46, 169, 222,0.8);
+	margin-top: 1%;
+	padding-bottom: 3px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+/* JavaScript */
+#javascript {
+	background-color: rgb(242, 191, 38,0.8);
+	margin-top: 1%;
+	padding-bottom: 3px;
+	padding-right: 20px;
+	padding-left: 20px;
+}

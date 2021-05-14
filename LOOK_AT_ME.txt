@@ -1,0 +1,15 @@
+Tento textový dokument nám bude sloužit, jako TODO list
+Věci, které jsou hotové prosím dejte, jako hotové. Věci co se musí udělat
+	dejte jako věci co se musí udělat
+
+TODO
+	Přidat index.html a cesty mezi stránkami
+	Udělat pro všechno hezké HTML, CSS a v případě potřeby JS (řekněte mi a já ho udělám) prvky
+	Nějak naplnit index.html, možná přidat i další stránky
+	meta tagyyy
+
+DONE
+	Celá test.html stránka (JS a potřebné HTML, CSS) by měla být plně funkční
+
+REMEMBER
+	cheatlist.txt obsahuje odpovědi na captchi a otázky (nebojte ve finální stránce nebude)

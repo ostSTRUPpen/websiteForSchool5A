@@ -1,0 +1,89 @@
+* {
+    box-sizing: content-box;
+    margin-top: 0px;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    width:100%;
+}
+/*Test velikost a odsazení*/
+.just-name { 
+    font-size: 30px;
+    margin: 40px;
+    margin-top: 0cm;
+}
+.navbar-links {
+    height: 60%;
+}
+/*aby neměly ty hnusný tečky a podtržení*/
+.navbar-links ul { 
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: large;
+}
+.navbar-links li {
+    list-style: none;
+}
+/*samotna dekorace těch prokliku */
+.navbar-links li a { 
+    display: block;
+    text-decoration: none; 
+    color: white; 
+    padding: 50px;
+}
+/*barva při najetí na prokliky*/
+.navbar-links li:hover { 
+    background-color: #555;
+}
+/*.hamburger-menu {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.hamburger-menu .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+} */
+/*@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hamburger-menu {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links ul li {
+        text-align: center;
+    }
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+} */
