@@ -1,0 +1,138 @@
+:root {
+    /*Light colors*/
+    --blue_3498db:#3498db;
+    --white: white;
+    --lightGray_aaa: #aaa;
+    --gray383838:#383838;
+    --green: green;
+    --lightgreenrgba75_187_23_08:rgba(75, 187, 23, 0.8);
+    --lightgrayE8E8E8:#E8E8E8;
+    /*Dark colors*/
+    --gray505050:#505050;
+    --darkblue:#000080;
+    --darkGrey:#282828;
+    --darkgreen:rgb(0, 80, 0);
+    --gray707070:#707070;
+	--whitesmoke: whitesmoke;
+}
+
+
+
+/* NAČÍTÁNÍ > */
+#loading {
+	margin: 200px auto;
+	border: 16px solid var(--loading_border); /* Light grey */
+	border-top: 16px solid var(--loading_border-top); /* Blue */
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	float: center;
+	animation: spin 2s linear infinite;
+}
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+/* < NAČÍTÁNÍ */
+#czktoxForm {
+	padding-top: 50px;
+}
+/* navbar */
+.just-name{
+  margin-left:1%;
+}
+/* tělíčko */
+/* /\ Nemůžu si pomoc, ale zní to hodně morbidně*/
+body {
+	background-color: var(--body_background_color);
+    margin-top:0px;
+    padding: 0;
+}
+/* czk na cokoliv tabulka > */
+#czktoxForm {
+  height: 20%;
+  margin-left:1%;
+  margin-right:1%;
+  margin-top:5%;
+  padding:5px;
+  border: 2px solid var(--form_border);
+  border-radius:5px;
+  background-color:	var(--backgroundform);
+  box-shadow: 10px 10px 8px var(--boxshadow);
+}
+legend{
+  font-size:30px;
+  text-align:center;
+  font-family:Candara;
+}
+.czktoxtext{
+  font-size:20px;
+  text-align:center;
+  font-family:Candara;
+}
+/* < czk na cokoliv tabulka */
+/* cokoliv na czk tabulka > */
+#xtoczkForm{
+  height: 20%;
+  margin-left:1%;
+  margin-right:1%;
+  margin-top:5%;
+  padding:5px;
+  border: 2px solid var(--form_border);
+  border-radius:5px;
+  background-color:	var(--backgroundform);
+  box-shadow: 10px 10px 8px var(--boxshadow);
+}
+legend{
+  font-size:30px;
+  text-align:center;
+  font-family:Candara;
+}
+.xtoczktext{
+  font-size:20px;
+  text-align:center;
+  font-family:Candara;
+}
+/* < cokoliv na czk tabulka */
+/* obě tabulky > */
+fieldset{
+	border: none;
+}
+input[type=number]{
+  height: 20px;
+  border:none;
+  margin-right:2px;
+  vertical-align: middle;
+  background-color: var(--inputbackground);
+}
+select{
+  height:23px;
+  border:none;
+  margin-left:2px;
+  vertical-align: middle;
+  background-color: var(--selectbackground);
+}
+/* < obě tabulky */
+/*light/dark mod*/
+.light-theme {
+    --loading_border: var(--lightGray_aaa);
+    --loading_border-top: var(--blue_3498db);
+    --form_border: var(--green);
+    --backgroundform: var(--lightgreenrgba75_187_23_08);
+    --boxshadow: var(--lightGray_aaa);
+	--inputbackground: var(--whitesmoke);
+    --selectbackground: var(--whitesmoke);
+	/*--inputbackground: var(--lightgrayE8E8E8);
+    --selectbackground: var(--lightgrayE8E8E8);*/
+}
+.dark-theme {
+    --body_background_color: var(--gray383838);
+    --loading_border: var(--gray505050);
+    --loading_border-top: var(--darkblue);
+    --boxshadow: var(--darkGrey);
+    --form_border: var(--darkgreen);
+	--inputbackground: var(--whitesmoke);
+    --selectbackground: var(--whitesmoke);
+	/*--inputbackground: var(--gray707070);
+    --selectbackground: var(--gray707070);*/
+}

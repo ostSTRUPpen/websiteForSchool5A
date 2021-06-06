@@ -1,17 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <link rel="stylesheet" href="../styles/test.css">
-    <link rel="stylesheet" href="../styles/all_pages.css">
-    <link rel="stylesheet" href="../styles/background.css">
-    <!--<script src="../iii.js" defer></script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VoSáMo">
+    <meta name="keywords"
+        content="HTML, CSS, JavaScript, Test, Otázky, Procvičování, Programování, Kvíz, Znalosti, Jazyky">
+    <meta name="description" content="Test na znalosti ze základních programovacích jazyků webové stránky">
+    <link rel="icon" type="image/png" href="../files/pictures/icons/sara.png">
+
+    <link rel="stylesheet" href="../styles/all_pages.css" type="text/css">
+    <link rel="stylesheet" href="../styles/test.css" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+
+        </script>
+
+    <title>Kvíz</title>
 </head>
 
-<body>
-    <header>
-
+<body class="light-theme" oncontextmenu="return false">
+    <header hidden>
+        <!-- horizontální navbar -->
+        <nav class="navbar">
+            <div class="just-name">Kvíz</div>
+            <div class="navbar-links">
+                <ul>
+                    <li><button onclick="scrollToElement('#hypertextmarkuplanguage', 50)">HTML</button></li>
+                    <li><button onclick="scrollToElement('#cascadingstylesheets', 50)">CSS</button></li>
+                    <li><button onclick="scrollToElement('#javascript', 50)">JavaScript</button></li>
+                    <li><button id="change">&#128065;&#65039;<span class="tooltiptext">Light/Dark theme</span></button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <!-- vertikální navbar -->
+        <nav class="vertical_navbar">
+            <div class="vertical_navbar-links">
+                <ul>
+                    <li><a href="../index.php" style="margin-top:150%;">Úvod</a></li>
+                    <li><a href="convert.html">Převodník měn</a></li>
+                    <li><a href="game/introduction.html">Hra</a></li>
+                    <li><a href="#">Kvíz</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main>
         <!-- Vše v <div> pode mnou se zobrazí v captche -->
@@ -22,200 +58,303 @@
             <input class="captchaInput" type="text">
             <button class="yes">OK</button>
         </div>
-        <!-- nav bar -->
-        <div id="everythingElse">
-            <nav class="navbar">
-                <div class="just-name">Test</div>
-                <!-- <a href="#" class="hamburger-menu"> proste kdyz se stranka moc zmensi, objevi se hamburger menu XD
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                </a>  -->
-                <div class="navbar-links">
-                  <ul>
-                    <li><a href="#">HTML</a></li>
-                    <li><a href="#">CSS</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                  </ul>
-                </div>
-            </nav>
-            <br>
-              <!--test-->
-            <div id="hypertextmarkuplanguage">
-                <h3>HyperText Markup Language</h3>
-                <img class="logo" src="../files/pictures/html.png" width="200" height="250" />
-                <form>
+        <!-- Vše v <div> pode mnou se zobrazí mimo captchu -->
+        <div id="everythingElse" class="everythingElse" hidden>
+            <form>
+                <div id="hypertextmarkuplanguage">
+                    <h3>HyperText Markup Language</h3>
+                    <img class="logo" src="../files/pictures/html.png" alt="logo HTML5" width="200" height="250" />
                     <fieldset>
                         <legend>Jaký je tag pro vertikální čáru (jako je &#60;hr&#62;, tak ale vertikální)?</legend>
-                        <input type="radio" name="hypertextmarkuplanguageQuestion1" value="1"> &#60;vl&#62;<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion1" value="2"> &#60;vr&#62;<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion1" value="3"> &#60;hr="90"&#62;<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion1" value="4"> pro vertikální čáru není
-                        tag<br />
-                        <!--spravne-->
+                        <input type="radio" name="hypertextmarkuplanguageQuestion1"
+                            id="hypertextmarkuplanguageQuestion1_1" value="1">
+                        <label for="hypertextmarkuplanguageQuestion1_1"> &#60;vl&#62;</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion1"
+                            id="hypertextmarkuplanguageQuestion1_2" value="2">
+                        <label for="hypertextmarkuplanguageQuestion1_2"> &#60;vr&#62;</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion1"
+                            id="hypertextmarkuplanguageQuestion1_3" value="3">
+                        <label for="hypertextmarkuplanguageQuestion1_3"> &#60;hr="90"&#62;</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion1"
+                            id="hypertextmarkuplanguageQuestion1_4" value="4">
+                        <label for="hypertextmarkuplanguageQuestion1_4"> pro vertikální čáru není tag</label>
+                        <br />
                     </fieldset>
                     <fieldset>
                         <legend>Kdy se <b>neotevře</b> cíl odkazu v novém okně?</legend>
-                        <input type="radio" name="hypertextmarkuplanguageQuestion2" value="1"> &#60;a href='/url' new
-                        &#62;<br />
-                        <!--správná odpoved-->
-                        <input type="radio" name="hypertextmarkuplanguageQuestion2" value="2"> &#60;a href='/url'
-                        target=new'&#62;<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion2" value="3"> &#60;a href='/url'
-                        target='_blank'&#62;<br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion2"
+                            id="hypertextmarkuplanguageQuestion2_1" value="1">
+                        <label for="hypertextmarkuplanguageQuestion2_1"> &#60;a href='/url' new&#62;</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion2"
+                            id="hypertextmarkuplanguageQuestion2_2" value="2">
+                        <label for="hypertextmarkuplanguageQuestion2_2"> &#60;a href='/url' target=new'&#62;</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion2"
+                            id="hypertextmarkuplanguageQuestion2_3" value="3">
+                        <label for="hypertextmarkuplanguageQuestion2_3"> &#60;a href='/url' target='_blank'&#62;</label>
+                        <br />
                     </fieldset>
                     <fieldset>
                         <legend>Jak propojíte HTML stránku index.html ve složce pages s CSS stylem style.css ve složce
                             mystyles (složky pages a mystyles jsou stejné úrovně)?</legend>
-                        <input type="radio" name="hypertextmarkuplanguageQuestion3" value="1"> &#60;link=stylesheet
-                        href="../mystyles/style.css"&#62;<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion3" value="2"> &#60;link
-                        rel="stylesheet"
-                        href="../mystyles/style.css"&#62;<br />
-                        <!--správná odpoved-->
-                        <input type="radio" name="hypertextmarkuplanguageQuestion3" value="3"> &#60;link
-                        rel="stylesheet"
-                        href="../style.css/mystyles"&#62;<br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion3"
+                            id="hypertextmarkuplanguageQuestion3_1" value="1">
+                        <label for="hypertextmarkuplanguageQuestion3_1"> &#60;link=stylesheet
+                            href="../mystyles/style.css"&#62;</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion3"
+                            id="hypertextmarkuplanguageQuestion3_2" value="2">
+                        <label for="hypertextmarkuplanguageQuestion3_2"> &#60;link rel="stylesheet"
+                            href="../mystyles/style.css"&#62;</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion3"
+                            id="hypertextmarkuplanguageQuestion3_3" value="3">
+                        <label for="hypertextmarkuplanguageQuestion3_3"> &#60;link rel="stylesheet"
+                            href="../style.css/mystyles"&#62;</label>
+                        <br />
                     </fieldset>
                     <fieldset>
                         <legend>Tag pro responzivní design zadáš do:</legend>
-                        <input type="radio" name="hypertextmarkuplanguageQuestion4" value="1"> nad head<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion4" value="2"> head<br />
-                        <!--spravna odpoved-->
-                        <input type="radio" name="hypertextmarkuplanguageQuestion4" value="3"> body<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion4" value="4"> nav<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion4" value="5"> article<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion4" value="6"> main<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion4" value="7"> footer<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion4" value="8"> mezi &#60;/body&#62; a
-                        &#60;/html&#62;<br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion4"
+                            id="hypertextmarkuplanguageQuestion4_1" value="1">
+                        <label for="hypertextmarkuplanguageQuestion4_1"> nad head</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion4"
+                            id="hypertextmarkuplanguageQuestion4_2" value="2">
+                        <label for="hypertextmarkuplanguageQuestion4_2"> head</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion4"
+                            id="hypertextmarkuplanguageQuestion4_3" value="3">
+                        <label for="hypertextmarkuplanguageQuestion4_3"> body</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion4"
+                            id="hypertextmarkuplanguageQuestion4_4" value="4">
+                        <label for="hypertextmarkuplanguageQuestion4_4"> nav</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion4"
+                            id="hypertextmarkuplanguageQuestion4_5" value="5">
+                        <label for="hypertextmarkuplanguageQuestion4_5"> article</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion4"
+                            id="hypertextmarkuplanguageQuestion4_6" value="6">
+                        <label for="hypertextmarkuplanguageQuestion4_6"> main</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion4"
+                            id="hypertextmarkuplanguageQuestion4_7" value="7">
+                        <label for="hypertextmarkuplanguageQuestion4_7"> footer</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion4"
+                            id="hypertextmarkuplanguageQuestion4_8" value="8">
+                        <label for="hypertextmarkuplanguageQuestion4_8"> mezi &#60;/body&#62; a
+                            &#60;/html&#62;;</label>
+                        <br />
                     </fieldset>
                     <fieldset>
                         <legend>Označ tag pro "seřazený" seznam:</legend>
-                        <input type="radio" name="hypertextmarkuplanguageQuestion5" value="1"> &#60;ul&#62;<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion5" value="2"> &#60;dd&#62;<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion5" value="3"> &#60;dt&#62;<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion5" value="4"> &#60;ol&#62;<br />
-                        <!--spravne-->
-                        <input type="radio" name="hypertextmarkuplanguageQuestion5" value="5"> &#60;li&#62;<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion5" value="6"> &#60;il&#62;<br />
-                        <input type="radio" name="hypertextmarkuplanguageQuestion5" value="7"> &#60;dl&#62;<br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion5"
+                            id="hypertextmarkuplanguageQuestion5_1" value="1">
+                        <label for="hypertextmarkuplanguageQuestion5_1"> &#60;ul&#62;</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion5"
+                            id="hypertextmarkuplanguageQuestion5_2" value="2">
+                        <label for="hypertextmarkuplanguageQuestion5_2"> &#60;dd&#62;</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion5"
+                            id="hypertextmarkuplanguageQuestion5_3" value="3">
+                        <label for="hypertextmarkuplanguageQuestion5_3"> &#60;dt&#62;</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion5"
+                            id="hypertextmarkuplanguageQuestion5_4" value="4">
+                        <label for="hypertextmarkuplanguageQuestion5_4"> &#60;ol&#62;</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion5"
+                            id="hypertextmarkuplanguageQuestion5_5" value="5">
+                        <label for="hypertextmarkuplanguageQuestion5_5"> &#60;li&#62;</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion5"
+                            id="hypertextmarkuplanguageQuestion5_6" value="6">
+                        <label for="hypertextmarkuplanguageQuestion5_6"> &#60;il&#62;</label>
+                        <br />
+                        <input type="radio" name="hypertextmarkuplanguageQuestion5"
+                            id="hypertextmarkuplanguageQuestion5_7" value="7">
+                        <label for="hypertextmarkuplanguageQuestion5_7"> &#60;dl&#62;</label>
+                        <br />
                     </fieldset>
-                    <input type="button" value="Hotovo" onclick="checkHypertextmarkuplanguage()">
-                    <input type="reset" value="Smazat">
-                </form>
-                <p id="hypertextmarkuplanguageOutput"></p>
-            </div>
-            <div id="cascadingstylesheets">
-                <h3>Cascading Style Sheets</h3>
-                <form>
+                </div>
+                <div id="cascadingstylesheets">
+                    <h3>Cascading Style Sheets</h3>
+                    <img class="logo" src="../files/pictures/css.png" alt="Logo CSS3" width="200" height="250" />
                     <fieldset>
                         <legend>Která řada vyjadřující, jak jdou po sobě "rámečky" u úpravy pozice obrázku od kraje
                             směrem ke středu, je správná?:</legend>
-                        <input type="radio" name="cascadingstylesheetsQuestion1" value="1"> margin, position, border,
-                        padding,
-                        content<br />
-                        <input type="radio" name="cascadingstylesheetsQuestion1" value="2"> margin, position, content,
-                        border,
-                        padding<br />
-                        <input type="radio" name="cascadingstylesheetsQuestion1" value="3"> padding, margin, border,
-                        content,
-                        position<br />
-                        <input type="radio" name="cascadingstylesheetsQuestion1" value="4"> position, margin, border,
-                        padding,
-                        content<br />
-                        <!--spravne-->
+                        <input type="radio" name="cascadingstylesheetsQuestion1" id="cascadingstylesheetsQuestion1_1"
+                            value="1">
+                        <label for="cascadingstylesheetsQuestion1_1"> margin, position, border, padding, content</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion1" id="cascadingstylesheetsQuestion1_2"
+                            value="2">
+                        <label for="cascadingstylesheetsQuestion1_2"> margin, position, content, border, padding</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion1" id="cascadingstylesheetsQuestion1_3"
+                            value="3">
+                        <label for="cascadingstylesheetsQuestion1_3"> padding, margin, border, content, position</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion1" id="cascadingstylesheetsQuestion1_4"
+                            value="4">
+                        <label for="cascadingstylesheetsQuestion1_4"> position, margin, border, padding, content</label>
+                        <br />
                     </fieldset>
                     <fieldset>
                         <legend>Transparentnost obrázku/pozadí se udává v hodnotách:</legend>
-                        <input type="radio" name="cascadingstylesheetsQuestion2" value="1"> 1 až 100<br />
-                        <input type="radio" name="cascadingstylesheetsQuestion2" value="2"> 1 až 10<br />
-                        <input type="radio" name="cascadingstylesheetsQuestion2" value="3"> 0 až 1<br />
-                        <!--spravne-->
-                        <input type="radio" name="cascadingstylesheetsQuestion2" value="4"> 1 až 6<br />
+                        <input type="radio" name="cascadingstylesheetsQuestion2" id="cascadingstylesheetsQuestion2_1"
+                            value="1">
+                        <label for="cascadingstylesheetsQuestion2_1"> 1 až 100</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion2" id="cascadingstylesheetsQuestion2_2"
+                            value="2">
+                        <label for="cascadingstylesheetsQuestion2_2"> 1 až 10</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion2" id="cascadingstylesheetsQuestion2_3"
+                            value="3">
+                        <label for="cascadingstylesheetsQuestion2_3"> 0 až 1</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion2" id="cascadingstylesheetsQuestion2_4"
+                            value="4">
+                        <label for="cascadingstylesheetsQuestion2_4"> 1 až 6</label>
+                        <br />
                     </fieldset>
                     <fieldset>
                         <legend>Jakým tagem zarovnáš text na střed?</legend>
-                        <input type="radio" name="cascadingstylesheetsQuestion3" value="1"> text-position:center;<br />
-                        <input type="radio" name="cascadingstylesheetsQuestion3" value="2"> position: center;<br />
-                        <input type="radio" name="cascadingstylesheetsQuestion3" value="3"> text-align:center;<br />
-                        <!-- správná odpověď-->
-                        <input type="radio" name="cascadingstylesheetsQuestion3" value="4"> text-layout: center;<br />
+                        <input type="radio" name="cascadingstylesheetsQuestion3" id="cascadingstylesheetsQuestion3_1"
+                            value="1">
+                        <label for="cascadingstylesheetsQuestion3_1"> text-position:center;</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion3" id="cascadingstylesheetsQuestion3_2"
+                            value="2">
+                        <label for="cascadingstylesheetsQuestion3_2"> position: center;</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion3" id="cascadingstylesheetsQuestion3_3"
+                            value="3">
+                        <label for="cascadingstylesheetsQuestion3_3"> text-align:center;</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion3" id="cascadingstylesheetsQuestion3_4"
+                            value="4">
+                        <label for="cascadingstylesheetsQuestion3_4"> text-layout: center;</label>
+                        <br />
                     </fieldset>
                     <fieldset>
                         <legend>Jakou CSS vlastností nastavujeme objektu obtékání?</legend>
-                        <input type="radio" name="cascadingstylesheetsQuestion4" value="1"> grid<br />
-                        <input type="radio" name="cascadingstylesheetsQuestion4" value="2"> float<br />
-                        <!--spravna odpoved-->
-                        <input type="radio" name="cascadingstylesheetsQuestion4" value="3"> isolation<br />
-                        <input type="radio" name="cascadingstylesheetsQuestion4" value="4"> transform<br />
-                        <input type="radio" name="cascadingstylesheetsQuestion4" value="5"> all<br />
+                        <input type="radio" name="cascadingstylesheetsQuestion4" id="cascadingstylesheetsQuestion4_1"
+                            value="1">
+                        <label for="cascadingstylesheetsQuestion4_1"> grid</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion4" id="cascadingstylesheetsQuestion4_2"
+                            value="2">
+                        <label for="cascadingstylesheetsQuestion4_2"> float</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion4" id="cascadingstylesheetsQuestion4_3"
+                            value="3">
+                        <label for="cascadingstylesheetsQuestion4_3"> isolation</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion4" id="cascadingstylesheetsQuestion4_4"
+                            value="4">
+                        <label for="cascadingstylesheetsQuestion4_4"> transform</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion4" id="cascadingstylesheetsQuestion4_5"
+                            value="5">
+                        <label for="cascadingstylesheetsQuestion4_5"> all</label>
+                        <br />
                     </fieldset>
                     <fieldset>
                         <legend>Jakými jednotkami nejde zadefinovat "width"?</legend>
-                        <input type="radio" name="cascadingstylesheetsQuestion5" value="1"> %<br />
-                        <input type="radio" name="cascadingstylesheetsQuestion5" value="2"> px<br />
-                        <input type="radio" name="cascadingstylesheetsQuestion5" value="3"> cm<br />
-                        <input type="radio" name="cascadingstylesheetsQuestion5" value="4"> p<br />
-                        <!--správná odpoved-->
-                        <input type="button" value="Hotovo" onclick="checkCascadingstylesheets()">
-                        <input type="reset" value="Smazat">
-                </form>
-                <p id="cascadingstylesheetsOutput"></p>
-            </div>
-            <div id="javascript">
-                <h3>JavaScript</h3>
-                <p>Všechny otázky jsou na čistý JavaScript. <span class="important">Pište středníky</span></p>
-                <form>
+                        <input type="radio" name="cascadingstylesheetsQuestion5" id="cascadingstylesheetsQuestion5_1"
+                            value="1">
+                        <label for="cascadingstylesheetsQuestion5_1"> %</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion5" id="cascadingstylesheetsQuestion5_2"
+                            value="2">
+                        <label for="cascadingstylesheetsQuestion5_2"> px</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion5" id="cascadingstylesheetsQuestion5_3"
+                            value="3">
+                        <label for="cascadingstylesheetsQuestion5_3"> cm</label>
+                        <br />
+                        <input type="radio" name="cascadingstylesheetsQuestion5" id="cascadingstylesheetsQuestion5_4"
+                            value="4">
+                        <label for="cascadingstylesheetsQuestion5_4"> p</label>
+                        <br />
+                    </fieldset>
+                </div>
+                <div id="javascript">
+                    <h3>JavaScript</h3>
+                    <img class="logo" src="../files/pictures/javascript.png" alt="Logo JS6" width="200" height="250" />
+                    <p>Všechny otázky jsou na čistý JavaScript. <span class="important">Pište středníky</span></p>
                     <fieldset>
-                        <legend>Jak vypíšu do konzole "Hello World"?</legend>
+                        <legend>Jak vypíšu do konzole "Hello World" ?</legend>
                         <input type="text" id="javascriptQuestion1">
                     </fieldset>
                     <fieldset>
                         <legend>Jak si z DOM vytáhnu všechny elementy s třídou "main_page"?</legend>
-                        <input type="radio" name="javascriptQuestion2" value="1">
-                        document.getElementByClass("main_page")<br />
-                        <input type="radio" name="javascriptQuestion2" value="2">
-                        document.getElementsByClass("main_page")<br />
-                        <input type="radio" name="javascriptQuestion2" value="3">
-                        document.getElementById("main_page")<br />
-                        <input type="radio" name="javascriptQuestion2" value="4"> $(".main_page")<br />
+                        <input type="radio" name="javascriptQuestion2" id="javascriptQuestion2_1" value="1">
+                        <label for="javascriptQuestion2_1"> document.getElementByClass("main_page");</label>
+                        <br />
+                        <input type="radio" name="javascriptQuestion2" id="javascriptQuestion2_2" value="2">
+                        <label for="javascriptQuestion2_2"> document.getElementsByClass("main_page");</label>
+                        <br />
+                        <input type="radio" name="javascriptQuestion2" id="javascriptQuestion2_3" value="3">
+                        <label for="javascriptQuestion2_3"> document.getElementById("main_page");</label>
+                        <br />
+                        <input type="radio" name="javascriptQuestion2" id="javascriptQuestion2_4" value="4">
+                        <label for="javascriptQuestion2_4"> $(".main_page");</label>
                     </fieldset>
                     <fieldset>
                         <legend>Změň text v tagu s id "out" na "Hello World"</legend>
                         <input type="text" id="javascriptQuestion3" size="50">
+                        <label for="javascriptQuestion3"></label>
                     </fieldset>
                     <fieldset>
                         <legend>Jaký bude výsledek kódu?</legend>
                         let sum = 0, i = 0; do { const x = sum; sum = x + i; i++; } while(0 &lt 20-sum);
                         console.log(sum+1);<br />
                         <input type="number" id="javascriptQuestion4">
+                        <label for="javascriptQuestion4"></label>
                     </fieldset>
                     <fieldset>
                         <legend>Když vezmeme kód pro "šneka ze sololearn javascript kurzu" a dáme mu jako hloubku studny
                             420 za kolik dní z ní vyleze?</legend>
                         <input type="number" id="javascriptQuestion5">
+                        <label for="javascriptQuestion5"></label>
                     </fieldset>
                     Bonus:
                     <fieldset>
                         <legend>Jak se v daných jazycích nakáže programu, že chceme vypsat proměnou "variable"?
                             (například PYTHON > print(variable))</legend>
-                        PHP > echo <input type="text" id="javascriptQuestion6"><br />
-                        CMD > echo <input type="text" id="javascriptQuestion7"><br />
-                        Ruby > puts <input type="text" id="javascriptQuestion8"><br />
+                        <label for="javascriptQuestion6">PHP > echo </label>
+                        <input type="text" id="javascriptQuestion6"><br />
+                        <label for="javascriptQuestion7">CMD > echo </label>
+                        <input type="text" id="javascriptQuestion7"><br />
+                        <label for="javascriptQuestion8">Ruby > puts </label>
+                        <input type="text" id="javascriptQuestion8"><br />
                     </fieldset>
-                    <input type="button" value="Hotovo" onclick="checkJavascript()">
+                    <input type="button" value="Hotovo" onclick="finnalPoints()">
                     <input type="reset" value="Smazat">
-                </form>
-                <p id="javascriptOutput"></p>
+                </div>
+            </form>
+            <div class="finnalOutputbckgrnd">
+                <h3>Celkový výsledek</h3>
+                <p id="finnalOutput"></p>
             </div>
-            <p id="finnalOutput"></p>
         </div>
     </main>
-    <footer>
 
+    <footer hidden>
     </footer>
-    <script src="../scripts/test.js"></script>
+    <script type="text/javascript" src="../scripts/all_pages.js"></script>
+    <script type="text/javascript" src="../scripts/test.js"></script>
 </body>
 
 </html>

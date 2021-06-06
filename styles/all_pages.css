@@ -1,89 +1,168 @@
+:root {
+	/* sem přijdou všechny barvičky :) ve formátu --JMENOBARVY: BARVA;
+	samotné určování kam jaká barva patří se děje na konci stránky :) 
+    V případě, že se jedná o nějakou random #168773 barvu tak napište
+    K čemu má blízko_kód barvy (viz --gray_333: #333)*/
+	--white: white;
+	--gray_333: #333;
+	--gray_555: #555;
+	--black: black;
+	--darkGrey: #282828;
+	--lightGray_rgb_230_230_230: rgb(230, 230, 230);
+	--backgroundGrey282828: #282828;
+}
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 * {
-    box-sizing: content-box;
-    margin-top: 0px;
+	font-family: Raleway;
+	box-sizing: content-box;
+	margin-top: 0px;
 }
 body {
-    margin: 0;
-    padding: 0;
+	background-color: var(--body_background_color);
+	margin: 0;
+	margin-top: 0px;
+	padding: 0;
+	user-select: none;
 }
+/* Horní NAVBAR > */
 .navbar {
-    display: flex;
-    position: fixed;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    width:100%;
+	display: flex;
+	position: fixed;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--navbar_background_color);
+	color: var(--navbar_font_color);
+	width: 100%;
+	height: 60px;
 }
 /*Test velikost a odsazení*/
-.just-name { 
-    font-size: 30px;
-    margin: 40px;
-    margin-top: 0cm;
+.just-name {
+	font-size: 40px;
+	margin: 13px;
+	margin-left: 30px;
 }
 .navbar-links {
-    height: 60%;
+	height: 60%;
 }
-/*aby neměly ty hnusný tečky a podtržení*/
-.navbar-links ul { 
-    display: flex;
-    margin: 0;
-    padding: 0;
-    font-size: large;
+/**/
+.navbar-links ul {
+	display: flex;
+	margin: 0;
 }
 .navbar-links li {
-    list-style: none;
+	list-style: none;
 }
 /*samotna dekorace těch prokliku */
-.navbar-links li a { 
-    display: block;
-    text-decoration: none; 
-    color: white; 
-    padding: 50px;
+.navbar-links li button {
+	display: block;
+	text-decoration: none;
+	font-size: large;
+	color: var(--navbar_link_color);
+	background-color: var(--navbar_background_color);
+	border: none;
+	/*padding:50px*/
+	margin-top: 0cm;
+	padding: 9px 50px 3px;
 }
 /*barva při najetí na prokliky*/
-.navbar-links li:hover { 
-    background-color: #555;
+.navbar-links li button:hover {
+	background-color: var(--navbar_link_hover_background_color);
 }
-/*.hamburger-menu {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
+/* < NAVBAR */
+/* Tlačítko na změnu barev >*/
+#change {
+	font-size: 20px;
+	margin: 0px;
+	margin-right: 5px;
+	padding: 10px;
+	padding-top: 2px;
+	padding-bottom: 4px;
+	background-color: var(--eye_button_bcg);
 }
-.hamburger-menu .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-} */
-/*@media (max-width: 800px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .hamburger-menu {
-        display: flex;
-    }
-    .navbar-links {
-        display: none;
-        width: 100%;
-    
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }
-    .navbar-links ul li {
-        text-align: center;
-    }
-    .navbar-links ul li a {
-        padding: .5rem 1rem;
-    }
-    .navbar-links.active {
-        display: flex;
-    }
-} */
+#change:hover {
+	background-color: var(--navbar_link_hover_background_color);
+}
+/*tooltip*/
+#change .tooltiptext {
+	visibility: hidden;
+	width: 70px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	font-size: 13px;
+
+	/* pozice tooltipu a ano, když to přepíšu z aj do čj, tak to nebude vypadat tak, že jsem to zkopírovala xd */
+	position: absolute;
+	z-index: 1;
+	top: 50px;
+	right: 20px;
+	margin-left: -60px;
+}
+
+#change:hover .tooltiptext {
+	visibility: visible;
+}
+/* < Tlačítko na změnu barev */
+/* Levý NAVBAR > */
+/* vertical nav bar menu*/
+.vertical_navbar-links ul {
+	list-style-type: none;
+	margin-top: 41px;
+	margin-right: 0px;
+	padding: 0px;
+	width: 150px;
+	height: 100%;
+	position: fixed;
+	overflow: auto;
+	float: left;
+	text-align: center;
+	font-size: large;
+	background-color: var(--vertical_navbar_bcg);
+}
+
+.vertical_navbar-links li a {
+	display: block;
+	color: var(--navbar_font_color);
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.vertical_navbar-links li a:hover {
+	background-color: var(--vertical_navbar_hover);
+	color: white;
+}
+/* < Levý NAVBAR */
+.everythingElse {
+	margin-left: 150px;
+	height: 100%;
+	margin-top: 0px;
+}
+
+/* light / dark theme */
+.light-theme {
+	/* Toto je celá nutná struktura */
+	--navbar_font_color: var(--white);
+	--navbar_background_color: var(--gray_333);
+	--navbar_link_color: var(--white);
+	--navbar_link_hover_background_color: var(--gray_555);
+	--hamburger_menu_background_color: var(--white);
+	--vertical_navbar_bcg: var(--gray_333);
+	--vertical_navbar_hover: var(--gray_555);
+	--eye_button_bcg: var(--gray_333);
+	--body_background_color: var(--lightGray_rgb_230_230_230);
+}
+.dark-theme {
+	--navbar_background_color: var(--darkGrey);
+	--vertical_navbar_bcg: var(--darkGrey);
+	--body_background_color: var(--backgroundGrey282828);
+	--eye_button_bcg: var(--backgroundGrey282828);
+}
+footer {
+	display: block;
+	text-align: left;
+	padding: 10px;
+	color: antiquewhite;
+}

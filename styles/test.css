@@ -1,8 +1,33 @@
-/* CSS pro captchu PROSÍM NEŠAHAT BEZ MÉHO SVOLENÍ > */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+:root {
+    /*Light colors*/
+    --white: white;
+    --lightGray_aaa: #aaa;
+    --lightBlue_rgba86_196_255_63: rgba(86, 196, 255, 0.63);
+    --red: red;
+    --black_00000070: #00000070;
+    --black_rgba0_0_0_02: rgba(0, 0, 0, 0.2);
+    --black_rgba0_0_0_19: rgba(0, 0, 0, 0.19);
+    --orange_rgba247_108_48_08: rgba(247, 108, 48, 0.8);
+    --lightBlue_rgba46_169_222_08: rgba(46, 169, 222,0.8);
+    --yellow_rgba255_203_62_0842: rgba(255, 203, 62, 0.842);
+    --lightPurple_rgba156_37_156_05:rgba(156, 37, 156, 0.5);
+
+    /*Dark colors*/
+    --darkGrey202020:#202020;
+    --grey_383838:#383838;
+    --darkOrange_rgb230_81_39:rgb(230,81,39);
+    --darkBlue_rgb12_115_184: rgb(12,115,184);
+    --darkyellow_rgb231_163_40: rgb(231,163,40);
+    --black: black;
+}
+/* CAPTCHA > */
 #captcha {
 	display: none;
-	background-color: #ffffff;
-	border: 1px solid #aaa;
+	background-color: var(--captcha_background_color);
+	border: 1px solid var(--captcha_border_color);
+  	border-radius: 3%;
 	position: fixed;
 	width: 250px;
 	left: 50%;
@@ -11,25 +36,33 @@
     margin-bottom: -5%;
 	padding: 6px 8px 8px;
 	box-sizing: border-box;
+  	color: var(--text_color_captcha);
 	text-align: center;
+  	box-shadow: 0 4px 8px 0 var(--logo_shadow_color1), 0 6px 10px 0 var(--logo_shadow_color2);
 }
 #captcha button {
-	background-color: #48e5da;
+  	color: var(--text_color_captcha_button);
+	background-color: var(--captcha_button_background_color);
 	display: inline-block;
 	border-radius: 5px;
-	border: 1px solid #aaa;
+	border: 1px solid var(--captcha_button_border_color);
 	margin-top: 2%;
 	padding: 5px;
 	text-align: center;
 	width: 80px;
 	cursor: pointer;
 }
+#captcha button:hover { 
+    box-shadow: 0 2px 3px 0 var(--logo_shadow_color1) inset, 0 2px 3px 0 var(--logo_shadow_color2) inset;
+    transition: 0.5s;
+} 
 #captcha .message {
-	text-align: left;
+	text-align: center;
+  	padding-bottom:5px;
 }
-/* < CSS pro captchu PROSÍM NEŠAHAT BEZ MÉHO SVOLENÍ */
+/* < CAPTCHA */
 .important{
-    color:red;
+    color: var(--important_text_color);
 }
 h3 {
 	margin-bottom: 10px;
@@ -37,10 +70,11 @@ h3 {
 	padding-bottom: 0px;
 	text-align: center;
 	font-size: 50px;
-	font-weight: 200;
-	font-family: 'Brush Script MT';
-	text-shadow: 1px 1px 4px #00000070;
+	font-weight: 600;
+	font-family: 'Alex Brush';
+	text-shadow: 1px 1px 7px var(--h3_text_shadow_color);
 }
+/* test > */
 form {
 	padding-top: 0px;
 	font-family: Candara;
@@ -52,28 +86,113 @@ fieldset{
 	float: right;
 	margin-right: 3%;
 	margin-top: 3%;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 var(--logo_shadow_color1), 0 6px 20px 0 var(--logo_shadow_color2);
 }
-/* HTML */
 #hypertextmarkuplanguage {
-	background-color:rgb(241,101,40,0.8);
+	background-color: var(--hypertextmarkuplanguage_background_color);
+	padding-top: 50px;
 	padding-bottom: 3px;
 	padding-right: 20px;
 	padding-left: 20px;
 }
-/* CSS */
 #cascadingstylesheets {
-	background-color: rgb(46, 169, 222,0.8);
+	background-color: var(--cascadingstylesheets_background_color);
 	margin-top: 1%;
 	padding-bottom: 3px;
 	padding-right: 20px;
 	padding-left: 20px;
 }
-/* JavaScript */
 #javascript {
-	background-color: rgb(242, 191, 38,0.8);
+	background-color: var(--javascript_background_color);
 	margin-top: 1%;
 	padding-bottom: 3px;
 	padding-right: 20px;
 	padding-left: 20px;
+}
+.finnalOutputbckgrnd{
+  margin-top: 1%;
+  margin-bottom:0px;
+  padding-bottom: 3px;
+	padding-right: 20px;
+	padding-left: 20px;
+  background-color: var(--finnalOutput_bckgrnd);
+}
+#finnalOutput {
+  font-family: Candara;
+  color: var(--finnalOutput_text_color);
+}
+input[type=button] {
+  margin-bottom: 10px;
+  border-radius: 5%;
+  border: 2px solid var(--grey_383838);
+  width: 60px;
+  height: 30px;
+  background-color: var(--form_button_color);
+  font-family: Candara;
+}
+input[type=button]:hover { 
+    box-shadow: 0 2px 3px 0 var(--logo_shadow_color1), 0 2px 3px 0 var(--logo_shadow_color2);
+    transition: 0.5s;
+} 
+input[type=reset]{
+  margin-left: 5px;
+  margin-bottom: 10px;
+  border-radius: 5%;
+  border: 2px solid var(--grey_383838);
+  width: 60px;
+  height: 30px;
+  background-color: var(--form_button_color);
+  font-family: Candara;
+}
+input[type=reset]:hover { 
+    box-shadow: 0 2px 3px 0 var(--logo_shadow_color1), 0 2px 3px 0 var(--logo_shadow_color2);
+    transition: 0.5s;
+}
+.success_rate{
+  font-size: 20px;
+  font-family:Candara;
+  text-align: center;
+}
+meter{
+  width: 100%;
+  height: 30px;
+}
+/* < test */
+/*light/dark mod*/
+.light-theme {
+    /* Toto je celá nutná struktura */
+    --captcha_background_color: var(--white);
+    --captcha_border_color: var(--lightGray_aaa);
+    --captcha_button_border_color: var(--lightGray_aaa);
+    --captcha_button_background_color: var(--lightBlue_rgba86_196_255_63);
+    --important_text_color: var(--red);
+    --h3_text_shadow_color: var(--black_00000070);
+    --logo_shadow_color1: var(--black_rgba0_0_0_02);
+    --logo_shadow_color2: var(--black_rgba0_0_0_19);
+    --hypertextmarkuplanguage_background_color: var(--orange_rgba247_108_48_08);
+    --form_button_color: var(--white);
+    --cascadingstylesheets_background_color: var(--lightBlue_rgba46_169_222_08);
+    --javascript_background_color: var(--yellow_rgba255_203_62_0842);
+    --finnalOutput_text_color: var(--black);
+    --black_border: var(--black);
+    --finnalOutput_bckgrnd: var(--lightPurple_rgba156_37_156_05);
+}
+.dark-theme {
+  --captcha_background_color: var(--darkGrey202020);
+    --captcha_border_color: var(--black_00000070);
+    --captcha_button_border_color: var(--black_00000070);
+    --captcha_button_background_color: var(--darkBlue_rgb12_115_184);
+    --text_color_captcha: var(--white);
+    --text_color_captcha_button: var(--white);
+    --important_text_color: var(--red);
+    --h3_text_shadow_color: var(--black_00000070);
+    --logo_shadow_color1: var(--black_rgba0_0_0_02);
+    --logo_shadow_color2: var(--black_rgba0_0_0_19);
+    --hypertextmarkuplanguage_background_color: var(--darkOrange_rgb230_81_39);
+    --form_button_color: var(--white);
+    --cascadingstylesheets_background_color: var(--darkBlue_rgb12_115_184);
+    --javascript_background_color: var(--darkyellow_rgb231_163_40);
+    --finnalOutput_text_color: var(--black);
+    --black_border: var(--black);
+    --finnalOutput_bckgrnd: var(--lightPurple_rgba156_37_156_05);
 }
