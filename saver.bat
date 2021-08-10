@@ -1,4 +1,4 @@
-rem Made by ostSTRUPpen
+REM Made by ostSTRUPpen
 CLS
 @ECHO off
 TITLE saving
