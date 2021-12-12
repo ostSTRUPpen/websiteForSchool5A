@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--meta tagy-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VoSáMo">
+    <link rel="icon" type="image/png" href="../../../files/pictures/icons/adam.png">
+
+    <link rel="stylesheet" href="../../../styles/all_pages.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/games/afs/game.css" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+        </script>
+
+    <title>Adam's Friday simulator</title>
+</head>
+
+<body oncontextmenu="return false">
+    <header>
+        <!-- vertikální navbar -->
+        <nav class="vertical_navbar">
+            <div class="vertical_navbar-links">
+                <ul>
+                    <li class="just-name">Hra</li>
+                    <li><a href="../../../../index.php" style="margin-top:160%;">Úvod</a></li>
+                    <li><a href="../../convert.html">Převodník měn</a></li>
+                    <li><a href="../selection.html">Hry</a></li>
+                    <li><a href="../../test.html">Kvíz</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="everythingElse">
+        <br>
+        <div class="game">
+            <div id="text_field_bubble">
+                <p id="text_field" class="typewriter">VoSáMo uvádí: Adam's Friday simulator</p>
+                <button id="option1" class="option" onclick="storyHandler('1')" hidden>PLACEHOLDER_ANS_1</button>
+                <button id="option2" class="option" onclick="storyHandler('2')" hidden>PLACEHOLDER_ANS_2</button>
+                <button id="option3" class="option" onclick="storyHandler('3')" hidden>PLACEHOLDER_ANS_3</button>
+                <button id="option4" class="option" onclick="storyHandler('4')" hidden>PLACEHOLDER_ANS_4</button>
+                <button id="option5" class="option" onclick="storyHandler('5')" hidden>PLACEHOLDER_ANS_5</button>
+                <button id="option6" class="option" onclick="storyHandler('6')" hidden>PLACEHOLDER_ANS_6</button>
+            </div>
+            <button id="skip" onclick="storyHandler('skip')">→</button>
+            <img id="character" src="../../files/pictures/asihra/characters/Adam/normal/adam-hneda.png" hidden>
+
+            <img id="achievment" src="" hidden>
+            <button id="secret" onclick="" hidden></button>
+        </div>
+        <br>
+    </main>
+
+    <script type="text/javascript" src="../../../scripts/games/game_engine.js"></script>
+    <script type="text/javascript" src="../../../scripts/games/afs/game.js"></script>
+    <!--buttons a tak no :)-->
+</body>
+
+</html>

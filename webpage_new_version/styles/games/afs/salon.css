@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+/*background*/
+body {
+	background-image: url('../../files/pictures/asihra/backgrounds/salonS.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 150px 0px;
+	background-size: cover;
+}
+/*navbar*/
+.vertical_navbar-links ul {
+	background-color: #333;
+	margin-top: 0px;
+}
+
+.vertical_navbar-links li {
+	color: white;
+}
+
+.vertical_navbar-links li a:hover {
+	background-color: #555;
+	color: white;
+}
+.just-name {
+	margin-left: 3%;
+}
+/*text*/
+#annotation {
+	margin: 5%;
+	margin-top: 1%;
+	margin-bottom: 3%;
+	padding: 1%;
+	border: 2px solid orchid;
+	border-radius: 1%;
+	background-color: rgba(153, 50, 204, 0.5);
+	color: white;
+	text-align: center;
+	font-family: Candara;
+	vertical-align: middle;
+}
+/*button*/
+#play {
+	border: 4px solid rgba(153, 50, 204, 0.5);
+	border-radius: 20%;
+	background-color: rgba(216, 13, 115, 0.945);
+	padding: 10px;
+	padding-right: 13px;
+	margin-left: 45%;
+}
+#play:hover {
+	background-color: rgba(255, 24, 139, 0.945);
+	transition: 0.4s;
+}
+#play a {
+	color: white;
+	font-size: 30px;
+	text-decoration: none;
+	font-family: 'Alex Brush';
+}
+/*charakter*/
+#Adam {
+	width: 25%;
+	position: fixed;
+	bottom: 0;
+	left: 42%;
+	background-color: rgba(172, 132, 192, 0.863);
+}
+/*tlačítka*/
+.arrow {
+	border: solid rgb(76, 11, 109);
+	border-width: 0 10px 10px 0;
+	display: inline-block;
+	padding: 1%;
+}
+
+.right {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	float: right;
+	margin-top: 22%;
+	position: fixed;
+	right: 29%;
+	bottom: 22%;
+}
+
+.left {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	float: left;
+	margin-top: 22%;
+	position: fixed;
+	left: 38%;
+	bottom: 22%;
+}
